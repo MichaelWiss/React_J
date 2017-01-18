@@ -19,7 +19,7 @@ var Nav = () => {
 		  <div className="top-bar-right">
             <ul className="menu">
               <li className="menu-text">
-                  created by<a href="http://resume.michaelrwiss.com/" target="_blank">Michael Wiss</a>
+                  created by <a href="http://resume.michaelrwiss.com/" target="_blank">Michael Wiss</a>
               </li>
             </ul>
            </div>
