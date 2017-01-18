@@ -1,3 +1,6 @@
+var webpackConfig = require('./webpack.config');
+
+
 module.exports = function (config) {
 	config.set({
       browsers: ['Chome'],
@@ -7,5 +10,15 @@ module.exports = function (config) {
       preprocessors: {
       	  'app/tests/**/*.test.jsx': ['webpack', 'sourcemap']
       },
+      reporters: ['mocha'], 
+      client: {
+      	mocha: {
+      		timeout: '5000'
+      	}
+      },
+      webpack: webpackConfig,
+      webpackServer: {
+      	noInfo: true
+      }
 	});
 };
