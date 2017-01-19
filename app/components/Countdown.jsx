@@ -1,17 +1,16 @@
 var React = require('react');
-var Nav = require('Nav');
 
-var Main = (props) => {
+var Countdown = (props) => {
 	return(
 		<div>
-		    <Nav/>
+		   
 			<div className="row">
 			 <div className="large-4 medium-6 small-centered columns">
-			  {props.children}
+			 Countdown
 			 </div>
 		    </div>
 		</div>
 	);
 }
 
-module.exports = Main;
+module.exports = Countdown;
