@@ -3,7 +3,7 @@ var webpackConfig = require('./webpack.config');
 
 module.exports = function (config) {
 	config.set({
-      browsers: ['Chome'],
+      browsers: ['Chrome'],
       singleRun: true,
       frameworks: ['mocha'],
       files: ['app/tests/**/*.test.jsx'],
