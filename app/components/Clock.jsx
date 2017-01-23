@@ -31,9 +31,9 @@ var Clock = React.createClass({
       		  <span className="clock-text">
       		     {this.formatSeconds(totalSeconds)}
       		  </span>
-      		</div>
+      	  </div>
       	);
       }
-});
+  });
 
 module.exports = Clock;
