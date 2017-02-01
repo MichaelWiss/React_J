@@ -1,6 +1,6 @@
 var React = require('react');
 
-var Controls = React.creaClass({
+var Controls = React.createClass({
     propTypes: {
     	countDownStatus: React.PropTypes.string.isRequired
     },
@@ -19,7 +19,6 @@ var Controls = React.creaClass({
     	    {renderStartStopButton()}
     		<button className="button alert hollow">Clear</button>
     		</div>
-    	}
       )
     }
 });
