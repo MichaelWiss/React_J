@@ -1,5 +1,5 @@
 var React = require('react');
-var ReactDom = require('react-dom');
+var ReactDOM = require('react-dom');
 var expect = require('expect');
 var $ = require('jQuery');
 var TestUtils = require('react-addons-test-utils');
@@ -17,7 +17,14 @@ describe('Controls', () => {
 			var $el = $(ReactDOM.findDOMNode(controls));
 			var $pauseButton = $el.find('button:contains(Pause)');
 
-			expect($pauseButton.length).toBe(1)
+			expect($pauseButton.length).toBe(1);
+		});
+		it('should render start when paused', ()=> {
+			var controls = TestUtils.renderIntoDocument(<Controls countdownStatus="paused"/>);
+			var $el = $(ReactDOM.findDOMNode(controls));
+			var $pauseButton = $el.find('button:contains(Start)');
+
+			expect($pauseButton.length).toBe(1);
 		});
 	});
 });
