@@ -32,5 +32,6 @@ describe('Countdown', () => {
               done();
            }, 3001)
         });
+        it('should pause countdown on paused status', )
 	});
 });
