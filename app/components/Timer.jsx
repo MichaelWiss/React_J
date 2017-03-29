@@ -8,7 +8,7 @@ var Timer = React.createClass({
          count: 0,
          timerStatus: 'stopped'
      };
-  };
+  },
   function (newTimerStatus) {
       console.log(newTimerStatus);
   },
@@ -19,7 +19,7 @@ var Timer = React.createClass({
     	<div>
     	<h1 className="page-title">Timer App</h1>
     	<Clock totalSeconds={count}/>
-    	<Controls countdownStatus={timerStatus} onStatusChange={this.handleStatusChange/>	
+    	<Controls countdownStatus={timerStatus} onStatusChange={this.handleStatusChange}/>	
     	</div>
     )
   }
