@@ -9,8 +9,13 @@ var Timer = React.createClass({
          timerStatus: 'stopped'
      };
   },
+  componentDidUpdate: function (prevProps, prevState) {
+     if (this.state.timerStatus !== prevState.timerStatus) {
+
+     }
+  },
   handleStatusChange: function (newTimerStatus) {
-      console.log(newTimerStatus);
+  	this.setState({timerStatus: newTimerStatus});
   },
   render: function () {
   	var {count, timerStatus} = this.state;
