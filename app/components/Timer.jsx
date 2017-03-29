@@ -9,7 +9,7 @@ var Timer = React.createClass({
          timerStatus: 'stopped'
      };
   },
-  function (newTimerStatus) {
+  handleStatusChange: function (newTimerStatus) {
       console.log(newTimerStatus);
   },
   render: function () {
