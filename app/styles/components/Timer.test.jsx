@@ -13,13 +13,14 @@ describe('Timer', () => {
 	it('should start on started status', () => {
       var timer = TestUtils.renderIntoDocument(<Timer/>);
 
-      timer.handStatusChange('started');
+      timer.handleStatusChange('started');
       expect(timer.state.count).toBe(0);
 
       setTimeout(() => {
         expect(timer.state.timerStatus).toBe('started');
-        
-      }, 1001);)
+        expect(timer.state.count).toBe(1);
+        done();
+      }, 1001);
 	});
 });
 
