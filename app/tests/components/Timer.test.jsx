@@ -46,7 +46,6 @@ describe('Timer', () => {
       timer.handleStatusChange('started');
       timer.handleStatusChange('stopped');
      
-
       setTimeout(() => {
         expect(timer.state.timerStatus).toBe('stopped');
         expect(timer.state.count).toBe(0);
