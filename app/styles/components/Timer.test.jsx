@@ -22,5 +22,21 @@ describe('Timer', () => {
         done();
       }, 1001);
 	});
+
+
+	it('should pause on paused status', (done) => {
+      var timer = TestUtils.renderIntoDocument(<Timer/>);
+
+      timer.setState({count: 10});
+
+      timer.handleStatusChange('started');
+      expect(timer.state.count).toBe(0);
+
+      setTimeout(() => {
+        expect(timer.state.timerStatus).toBe('started');
+        expect(timer.state.count).toBe(1);
+        done();
+      }, 1001);
+	});
 });
 
